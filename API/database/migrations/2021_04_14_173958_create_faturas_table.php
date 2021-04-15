@@ -18,6 +18,7 @@ class CreateFaturasTable extends Migration
             $table->char('nome_fatura', 232);
             $table->integer('preco');
             $table->date('fechamento');
+            $table->string('status');
             $table->timestamps();
         });
     }

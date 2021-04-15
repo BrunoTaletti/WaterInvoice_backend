@@ -17,13 +17,15 @@ class FaturasController extends Controller
         request()->validate([
             'nome_fatura' => 'required',
             'preco' => 'required',
-            'fechamento' => 'required'
+            'fechamento' => 'required',
+            'status' => 'required'
         ]);
     
         return Faturas::create([
             'nome_fatura' => request('nome_fatura'),
             'preco' => request('preco'),
-            'fechamento' => request('fechamento')
+            'fechamento' => request('fechamento'),
+            'status' => request('status')
         ]);
     }
 
@@ -32,13 +34,15 @@ class FaturasController extends Controller
         request()->validate([
             'nome_fatura' => 'required',
             'preco' => 'required',
-            'fechamento' => 'required'
+            'fechamento' => 'required',
+            'status' => 'required'
         ]);
     
         $faturas->update([
             'nome_fatura' => request('nome_fatura'),
             'preco' => request('preco'),
-            'fechamento' => request('fechamento')
+            'fechamento' => request('fechamento'),
+            'status' => request('status')
         ]);
     }
 

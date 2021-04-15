@@ -12,6 +12,7 @@ class Faturas extends Model
     protected $fillable = [
         'nome_fatura',
         'preco',
-        'fechamento'
+        'fechamento',
+        'status'
     ];
 }
